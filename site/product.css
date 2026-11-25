@@ -111,7 +111,7 @@ a { color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2e
 .edition-list li > div { display: grid; gap: .12rem; }
 .edition-list li > div > span, .edition-state { color: var(--muted); font-size: .9rem; }
 .site-footer { border-top: 1px solid var(--line); }
-.footer-row { min-height: 5rem; }
+.footer-row { min-height: 5rem; flex-wrap: wrap; padding-block: .75rem; }
 
 @media (max-width: 52rem) {
   .hero, .features, .editions, .local-content { grid-template-columns: minmax(0, 1fr); }

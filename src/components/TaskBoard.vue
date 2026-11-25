@@ -343,8 +343,6 @@ function onCardClick(task: Task) {
               <span class="color-dot" :style="{ background: colorHex(item.task.color) }" />
               <span class="card-title" :title="item.task.title">{{ item.task.title }}</span>
             </div>
-            <div v-if="item.task.content" class="card-content">{{ item.task.content }}</div>
-            <div v-else class="card-content is-empty">点击查看或补充内容…</div>
           </template>
         </div>
       </TransitionGroup>
@@ -442,9 +440,10 @@ function onCardClick(task: Task) {
 }
 .task-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
   align-content: start;
+  align-items: start;
 }
 
 .task-card {
@@ -453,7 +452,8 @@ function onCardClick(task: Task) {
   border: 1px solid var(--el-border-color-light);
   border-radius: 12px;
   padding: 16px 18px;
-  aspect-ratio: 85.6 / 54;
+  min-width: 0;
+  min-height: 80px;
   display: flex;
   flex-direction: column;
   cursor: grab;
@@ -483,11 +483,12 @@ function onCardClick(task: Task) {
 
 .card-top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 .color-dot {
   flex-shrink: 0;
+  margin-top: 8px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -498,9 +499,9 @@ function onCardClick(task: Task) {
   font-size: 15px;
   font-weight: 600;
   color: var(--el-text-color-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 /* 图钉：半入侵卡片左上角，圆形钉头一半露在卡片顶边外 */
 .pin-btn {
@@ -537,23 +538,6 @@ function onCardClick(task: Task) {
 }
 .pin-btn.is-pinned :deep(svg) {
   fill: currentColor;
-}
-
-/* 内容摘要：超出隐藏，点击查看全部 */
-.card-content {
-  margin-top: 12px;
-  font-size: 13px;
-  line-height: 1.7;
-  color: var(--el-text-color-regular);
-  white-space: pre-wrap;
-  word-break: break-word;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.card-content.is-empty {
-  color: var(--el-text-color-placeholder);
 }
 
 /* 占位符：拖拽时提示插入位置 */

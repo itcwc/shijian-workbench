@@ -67,7 +67,7 @@ const menus: First[] = [
 ]
 
 const activeFirst = ref(0)
-const activeSecond = ref(0)
+const activeSecond = ref(new URLSearchParams(window.location.search).get('view') === 'review' ? 1 : 0)
 const activeThird = ref(0)
 
 /** 一级导航是否收缩为窄条（只保留图标），默认收起 */
@@ -112,7 +112,7 @@ function selectSecond(index: number) {
 </script>
 
 <template>
-  <div class="layout" :class="{ 'is-collapsed': collapsed }">
+  <div class="layout" :class="{ 'is-collapsed': collapsed, 'is-review': isReview }">
     <!-- 最左：一级导航（可收缩/展开） -->
     <aside class="nav-first">
       <div class="brand" title="事间">

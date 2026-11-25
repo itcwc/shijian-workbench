@@ -358,3 +358,25 @@ body {
 .card-title {
   font-weight: 600;
 }
+
+@media (max-width: 760px) {
+  .layout.is-review {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-rows: 54px minmax(0, 1fr);
+    height: 100dvh;
+  }
+
+  .is-review .nav-first { grid-row: 1 / -1; width: 52px; min-width: 0; }
+  .is-review .brand { height: 54px; flex-basis: 54px; justify-content: center; padding: 0; }
+  .is-review .brand-name, .is-review .first-label, .is-review .collapse-label { display: none; }
+  .is-review .first-menu, .is-review .first-foot { padding-inline: 6px; }
+  .is-review .first-item, .is-review .collapse-btn { justify-content: center; padding-inline: 0; }
+  .is-review .nav-second { grid-column: 2; grid-row: 1; width: auto; flex-direction: row; align-items: center; border-right: 0; border-bottom: 1px solid var(--border); }
+  .is-review .second-title { display: none; }
+  .is-review .second-menu { display: flex; gap: 6px; padding: 6px 10px; }
+  .is-review .second-item { width: auto; margin: 0; padding: 9px 12px; white-space: nowrap; }
+  .is-review .content { grid-column: 2; grid-row: 2; min-height: 0; }
+  .is-review .topbar { height: 42px; flex-basis: 42px; padding-inline: 14px; }
+  .is-review .content-body { padding: 18px 12px 0; }
+}

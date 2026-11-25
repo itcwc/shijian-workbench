@@ -366,6 +366,7 @@ function onCardClick(task: Task) {
 
     <el-dialog
       v-model="taskDialogVisible"
+      class="task-detail-dialog"
       :title="taskForm.id ? '任务详情' : '添加任务'"
       width="min(720px, calc(100vw - 32px))"
       align-center
@@ -409,6 +410,10 @@ function onCardClick(task: Task) {
 </template>
 
 <style scoped>
+:global(.task-detail-dialog) {
+  padding-inline: clamp(20px, 3vw, 24px);
+}
+
 .board {
   flex: 1;
   min-height: 0;

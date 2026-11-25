@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="事间是一个本地优先的个人工作台，用来整理任务、回顾进度和设置日常提醒。" />
+    <meta name="theme-color" content="#409eff" />
+    <link rel="icon" href="./shijian-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./brand.css" />
+    <link rel="stylesheet" href="./product.css" />
+    <script src="./preview.js" defer></script>
+    <title>事间 · 个人工作台</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-width header-row">
+        <a class="wordmark" href="./" aria-label="事间首页">
+          <span class="shijian-mark" aria-hidden="true">事</span>
+          <span>事间</span>
+        </a>
+        <nav class="main-nav" aria-label="产品导航">
+          <a href="#features">功能</a>
+          <a href="#editions">版本</a>
+          <a class="button button-small" href="./app/">打开网页版</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero site-width" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">把每天的事，<br />理清楚。</h1>
+          <p>事间是一个本地优先的个人工作台。随手记下待办，在月历里回顾做完的事，也给喝水和走动留一点时间。</p>
+          <a class="button button-primary" href="./app/">打开网页版</a>
+        </div>
+
+        <div class="preview" aria-label="事间功能预览">
+          <div class="preview-header">
+            <div class="preview-brand"><span class="shijian-mark" aria-hidden="true">事</span>事间</div>
+            <span class="preview-label">示例数据</span>
+          </div>
+          <div class="preview-tabs" role="tablist" aria-label="功能预览">
+            <button id="tab-tasks" type="button" role="tab" aria-selected="true" aria-controls="demo-tasks">任务</button>
+            <button id="tab-review" type="button" role="tab" aria-selected="false" aria-controls="demo-review" tabindex="-1">月历复盘</button>
+          </div>
+          <div class="preview-content" id="demo-tasks" role="tabpanel" aria-labelledby="tab-tasks" tabindex="0">
+            <div class="preview-heading"><h2>任务清单</h2><span>3 项任务</span></div>
+            <ul class="demo-tasks">
+              <li><span class="task-dot blue" aria-hidden="true"></span><div><strong>整理本月项目进展</strong><span>记录交付进度和下月待办。</span></div><span class="demo-state">进行中</span></li>
+              <li><span class="task-dot orange" aria-hidden="true"></span><div><strong>核对发布清单</strong><span>确认文案、版本号和下载入口。</span></div><span class="demo-state">待处理</span></li>
+              <li><span class="task-dot green" aria-hidden="true"></span><div><strong>归档本周会议纪要</strong><span>整理决议和后续行动项。</span></div><span class="demo-state is-done">已完成</span></li>
+            </ul>
+          </div>
+          <div class="preview-content" id="demo-review" role="tabpanel" aria-labelledby="tab-review" tabindex="0" hidden>
+            <div class="preview-heading"><h2>11 月复盘</h2><span>3 项已完成</span></div>
+            <div class="demo-calendar" aria-label="完成任务按日期和颜色显示">
+              <div><small>周一</small><strong>16</strong><span class="task-dot blue" aria-label="完成蓝色任务"></span></div>
+              <div><small>周二</small><strong>17</strong></div>
+              <div><small>周三</small><strong>18</strong></div>
+              <div><small>周四</small><strong>19</strong><span class="task-dot orange" aria-label="完成橙色任务"></span></div>
+              <div><small>周五</small><strong>20</strong></div>
+              <div><small>周六</small><strong>21</strong><span class="task-dot green" aria-label="完成绿色任务"></span></div>
+              <div><small>周日</small><strong>22</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features section-space site-width" id="features" aria-labelledby="features-title">
+        <div class="section-intro">
+          <h2 id="features-title">从随手记到月底回看</h2>
+          <p>任务多了也能找得到，完成的事也有地方回顾。</p>
+        </div>
+        <div class="feature-list">
+          <article><h3>任务管理</h3><p>快速记录标题和内容，用颜色区分任务。按关键词、完成状态或颜色查找，也可以拖动排序。</p></article>
+          <article><h3>月历复盘</h3><p>完成的任务按日期显示为彩点。悬停可查看详情，也能按颜色筛选，回看某一类事情的进展。</p></article>
+          <article><h3>日常提醒</h3><p>分别设置喝水和走动的时段与间隔。打开网页并允许浏览器通知，就能收到提醒。</p></article>
+        </div>
+      </section>
+
+      <section class="local-band" aria-labelledby="local-title">
+        <div class="site-width local-content">
+          <h2 id="local-title">任务和主题保存在本机</h2>
+          <p>无需登录即可开始。可以把任务和浅色、暗色主题偏好导出为 JSON 文件，再在事间导入恢复。</p>
+        </div>
+      </section>
+
+      <section class="editions section-space site-width" id="editions" aria-labelledby="editions-title">
+        <div class="section-intro"><h2 id="editions-title">版本与下载</h2></div>
+        <ul class="edition-list">
+          <li><div><strong>网页版</strong><span>在浏览器里使用事间</span></div><a class="button button-small" href="./app/">打开网页版</a></li>
+          <li><div><strong>桌面版</strong><span>Windows 应用</span></div><span class="edition-state">筹备中</span></li>
+          <li><div><strong>手机 App</strong><span>Android 应用</span></div><span class="edition-state">筹备中</span></li>
+          <li><div><strong>开源仓库</strong><span>源码与发布记录</span></div><a class="button button-small" href="https://github.com/itcwc/shijian-workbench">查看 GitHub</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-width footer-row">
+        <a class="wordmark" href="./" aria-label="事间首页"><span class="shijian-mark" aria-hidden="true">事</span><span>事间</span></a>
+        <a href="./app/">打开网页版</a>
+      </div>
+    </footer>
+  </body>
+</html>

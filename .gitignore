@@ -1,0 +1,12 @@
+node_modules/
+dist/
+/product-site/
+*.tsbuildinfo
+.env
+.env.*
+*.local
+*.log
+/.screenshots/
+/.trae/
+/.trae-html-share-packages/
+/.workbuddy/

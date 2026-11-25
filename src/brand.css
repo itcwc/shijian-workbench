@@ -1,0 +1,32 @@
+:root {
+  --shijian-primary: #409eff;
+  --shijian-on-primary: #fff;
+}
+
+.shijian-mark {
+  --mark-size: 2rem;
+
+  position: relative;
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: var(--mark-size);
+  height: var(--mark-size);
+  border-radius: 21%;
+  background: var(--shijian-primary);
+  color: var(--shijian-on-primary);
+  font-family: KaiTi, 'Kaiti SC', SimSun, 'Noto Serif CJK SC', serif;
+  font-size: calc(var(--mark-size) * 0.61);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.shijian-mark::before {
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgb(255 255 255 / 42%);
+  border-radius: 17%;
+  content: '';
+  pointer-events: none;
+}

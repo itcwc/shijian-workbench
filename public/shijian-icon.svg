@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .tile { fill: #409eff; }
+    .frame { fill: none; stroke: #fff; stroke-opacity: .42; }
+    text { fill: #fff; font: 38px KaiTi, 'Kaiti SC', SimSun, serif; }
+  </style>
+  <rect class="tile" x="2" y="2" width="60" height="60" rx="12" />
+  <rect class="frame" x="9" y="9" width="46" height="46" rx="7" />
+  <text x="32" y="33" text-anchor="middle" dominant-baseline="central">事</text>
+</svg>

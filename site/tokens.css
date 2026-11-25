@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light;
+  --sj-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+  --sj-text-xs: 12px;
+  --sj-text-sm: 14px;
+  --sj-text-base: 16px;
+  --sj-text-lg: 20px;
+  --sj-text-xl: 24px;
+  --sj-leading: 1.6;
+  --sj-radius-sm: 6px;
+  --sj-radius-control: 8px;
+  --sj-radius-card: 12px;
+  --sj-radius-dialog: 16px;
+  --sj-control-default: 40px;
+  --sj-control-large: 48px;
+  --sj-duration: 160ms;
+  --sj-shadow-card: 0 1px 3px rgb(29 49 79 / 4%);
+  --sj-shadow-float: 0 12px 36px rgb(29 49 79 / 9%);
+  --sj-bg-page: #f7f9fc;
+  --sj-bg-surface: #fff;
+  --sj-bg-subtle: #f0f4f9;
+  --sj-text-primary: #243248;
+  --sj-text-secondary: #596b82;
+  --sj-border-subtle: #dce4ef;
+  --sj-border-control: #acbbce;
+  --sj-accent: #2e67b2;
+  --sj-accent-hover: #245593;
+  --sj-accent-soft: #eaf1fb;
+  --sj-on-accent: #fff;
+}

@@ -23,3 +23,10 @@ for (const [index, tab] of tabs.entries()) {
     target.focus()
   })
 }
+
+for (const link of document.querySelectorAll('[data-preview]')) {
+  link.addEventListener('click', () => {
+    const tab = document.getElementById(`tab-${link.dataset.preview}`)
+    if (tab) activate(tab)
+  })
+}

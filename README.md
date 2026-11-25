@@ -23,13 +23,21 @@ npm ci
 npm run dev
 ```
 
-在浏览器打开 `http://127.0.0.1:5180`。
+在浏览器打开 `http://127.0.0.1:5188`。
 
 - `npm run build` 构建工作台至 `dist/`。
 - `npm run build:site` 构建宣传页及工作台至 `product-site/dist/`。
 - `npm run preview:site` 在本地预览完整站点。
 
 当前可使用网页版。桌面版与 Android 版筹备中。
+
+## 视觉规范与验收
+
+本次改造仅涉及 Landing Page，采用冷静克制的蓝色。宣传页的颜色、字体、圆角及阴影集中在 `site/tokens.css`，页面样式位于 `site/product.css`。沿用原有 `src/brand.css` 品牌标识，通过宣传页自身样式设置蓝色。App 已还原，后续视觉与计划任务改造暂缓。
+
+宣传页的 `site/screenshots/` 使用还原后的实际 App 截图，尺寸为 1440 × 1000。手机宣传页按比例展示同一张真实截图，支持打开大图。界面调整后，应使用不含个人数据的本地预览重新截图，并运行 `npm run build:site` 复制资源。截图说明见该目录的 README。
+
+设计审计见 `DESIGN_AUDIT.md`，本次改造和验收记录见 `VISUAL_UPDATE_REPORT.md`。
 
 ## 许可证
 

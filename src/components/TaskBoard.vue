@@ -339,9 +339,12 @@ function onCardClick(task: Task) {
             >
               <Pin :size="14" :stroke-width="2" />
             </button>
-            <div class="card-top">
-              <span class="color-dot" :style="{ background: colorHex(item.task.color) }" />
-              <span class="card-title" :title="item.task.title">{{ item.task.title }}</span>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="color-dot" :style="{ background: colorHex(item.task.color) }" />
+                <span class="card-title" :title="item.task.title">{{ item.task.title }}</span>
+              </div>
+              <div v-if="item.task.content" class="card-content">{{ item.task.content }}</div>
             </div>
           </template>
         </div>
@@ -453,7 +456,8 @@ function onCardClick(task: Task) {
   border-radius: 12px;
   padding: 16px 18px;
   min-width: 0;
-  min-height: 80px;
+  min-height: 0;
+  aspect-ratio: 85.6 / 54;
   display: flex;
   flex-direction: column;
   cursor: grab;
@@ -481,8 +485,16 @@ function onCardClick(task: Task) {
   cursor: default;
 }
 
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+}
 .card-top {
   display: flex;
+  flex-shrink: 0;
   align-items: flex-start;
   gap: 8px;
 }
@@ -501,6 +513,17 @@ function onCardClick(task: Task) {
   color: var(--el-text-color-primary);
   line-height: 1.6;
   white-space: normal;
+  overflow-wrap: anywhere;
+}
+.card-content {
+  flex: 0 1 auto;
+  min-height: 0;
+  margin-top: 12px;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--el-text-color-regular);
+  white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 /* 图钉：半入侵卡片左上角，圆形钉头一半露在卡片顶边外 */

@@ -16,7 +16,7 @@ import {
 import App from './App.vue'
 import { workbenchTheme } from './data/theme'
 import 'element-plus/theme-chalk/dark/css-vars.css'
-import './brand.css'
+import '../../packages/brand/brand.css'
 import './styles.css'
 
 const app = createApp(App)

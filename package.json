@@ -5,11 +5,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit -p tsconfig.json && vite build",
-    "preview": "vite preview",
-    "build:site": "vue-tsc --noEmit -p tsconfig.json && node scripts/build-product-site.mjs",
-    "preview:site": "vite preview --outDir product-site/dist --port 5181 --strictPort"
+    "dev": "vite --config web/vite.config.ts",
+    "dev:site": "vite --config site/vite.config.mjs",
+    "typecheck": "vue-tsc --noEmit -p web/tsconfig.json",
+    "build": "npm run typecheck && node scripts/build-product-site.mjs",
+    "build:web": "npm run typecheck && vite build --config web/vite.config.ts",
+    "build:site": "node scripts/build-site.mjs",
+    "preview": "vite preview --config web/vite.config.ts",
+    "preview:site": "vite preview --config site/vite.config.mjs --port 5181 --strictPort"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
